@@ -2,16 +2,18 @@ package alumnos;
 import Alumno.Alumno;
 import java.util.Scanner;
 
+  /**
+  * @author Miguel Angel Angel Acedo Ariza
+  * @since 1.0
+  * @version 1.0
+  */
+
 public class Alumnos {
+
   public static void main(String[] args) {
     Scanner entrada = new Scanner(System.in);
-    
-    // Define la estructura, un array de 5 alumnos
-    // pero no crea los objetos
-    Alumno[] alum = new Alumno[5];
-    
 
-    // Pide los datos de los alumnos /////////////////////////////////
+    Alumno[] alum = new Alumno[5];
         
     System.out.println("A continuacion debera introducir el nombre y la nota media de 5 alumnos.");
 
@@ -28,9 +30,7 @@ public class Alumnos {
       System.out.print("Nota media: ");
       notaIntroducida = Double.parseDouble(entrada.nextLine());
       alum[i].setNota(notaIntroducida);
-    } // for i
-    
-    // Muestra los datos de los alumnos /////////////////////////////////
+    }     
     
     System.out.println("Los datos introducidos son los siguientes:");
 
@@ -43,7 +43,7 @@ public class Alumnos {
       System.out.println("----------------------------");
 
       sumaDeMedias += alum[i].getNota();
-    } // for i
+    }
     
     System.out.println("La media global de la clase es " + sumaDeMedias / 5);
   }
